@@ -5,5 +5,5 @@ Based on <GraphBIG: Understanding Graph Computing in the Context of Industrial S
 
 FPGA-based accerleration for SSSP(Single Source Shortest Path), using dijkstra's algorithm.
 
-For details, See <FPGA Acceleration for Graph Application.pptx>
+For details, See FPGA Acceleration for Graph Application.pptx
 

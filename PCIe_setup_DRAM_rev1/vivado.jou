@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Nov  4 13:09:34 2019
+# Process ID: 19056
+# Current directory: F:/JUYG/PCIe_setup_DRAM_rev1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2808 F:\JUYG\PCIe_setup_DRAM_rev1\project_1.xpr
+# Log file: F:/JUYG/PCIe_setup_DRAM_rev1/vivado.log
+# Journal file: F:/JUYG/PCIe_setup_DRAM_rev1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/JUYG/PCIe_setup_DRAM_rev1/project_1.xpr
+update_compile_order -fileset sources_1

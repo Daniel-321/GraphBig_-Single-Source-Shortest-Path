@@ -1,0 +1,272 @@
+module AXI_model_d(
+	ACLK,
+	ARESETN,
+	APB_WADDR,
+	APB_WDATA,
+	APB_WENABLE,
+	APB_WREADY,
+	APB_RADDR,
+	APB_RDATA,
+	APB_RENABLE,
+	APB_RREADY	
+);
+
+input ACLK;
+input ARESETN;
+input [31:0] APB_WADDR;
+input [1023:0] APB_WDATA;
+input APB_WENABLE;
+output reg APB_WREADY;
+input [31:0] APB_RADDR;
+output reg [1023:0] APB_RDATA;
+input APB_RENABLE;
+output reg APB_RREADY;	
+
+reg axi_wvalid_l;
+reg axi_rvalid_l;
+reg [1023:0] DRAM1000,DRAM0,DRAM1,DRAM2,DRAM3,DRAM4,DRAM5,DRAM6,DRAM7,DRAM8,DRAM9,
+DRAM10,DRAM11,DRAM12,DRAM13,DRAM14,DRAM15,DRAM16,DRAM17,DRAM18,DRAM19,
+DRAM20,DRAM21,DRAM22,DRAM23,DRAM24,DRAM25,DRAM26,DRAM27,DRAM28,DRAM29,
+DRAM30,DRAM31,DRAM32,DRAM33,DRAM34,DRAM35,DRAM36,DRAM37,DRAM38,DRAM39,
+DRAM400, DRAM401;
+parameter ZB = 32'h0000_0000;
+parameter ZB_32 = 32'h0000_0020;
+parameter visit = 32'h0000_0000;
+parameter INF =  32'hFFFF_FFFF;
+parameter nvisit = 32'h8000_0000;
+parameter UNUSE = 16'h0000;
+parameter SAME = 8'h00;
+parameter CNT = 8'h00;
+always @(negedge ARESETN)begin
+//{pack_base,dist_base,map_base,start_id,MAX_id} 
+DRAM1000 <= {ZB+0,ZB+30,ZB+400,ZB+3,ZB+15,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+// { 32' now_id , 32 { 16' unuse , 8' same, 8'b count }, 32'adj_node , 32'weight ... }
+DRAM0 <= {ZB+0,UNUSE, SAME, CNT +2 ,ZB+3,ZB+5,ZB+5,ZB+2,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM1 <={ZB+1,UNUSE, SAME, CNT + 2 ,ZB+2,ZB+7,ZB+8,ZB+4,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM2 <={ZB+2,UNUSE, SAME, CNT + 4 ,ZB+1,ZB+7,ZB+4,ZB+5,ZB+7,ZB+5,ZB+12,ZB+3,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM3 <={ZB+3,UNUSE, SAME, CNT +2 ,ZB+0,ZB+5,ZB+4,ZB+6,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM4 <={ZB+4,UNUSE, SAME, CNT + 4 ,ZB+2,ZB+5,ZB+3,ZB+6,ZB+5,ZB+2,ZB+9,ZB+1,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM5 <={ZB+5,UNUSE, SAME, CNT + 3,ZB+0,ZB+2,ZB+4,ZB+2,ZB+8,ZB+3,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM6 <={ZB+6,UNUSE, SAME, CNT + 2,ZB+7,ZB+2,ZB+11,ZB+7,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM7 <={ZB+7,UNUSE, SAME, CNT + 3,ZB+2,ZB+5,ZB+6,ZB+2,ZB+9,ZB+2,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM8 <={ZB+8,UNUSE, SAME, CNT + 4,ZB+1,ZB+4,ZB+5,ZB+3,ZB+10,ZB+1,ZB+14,ZB+3,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM9 <={ZB+9,UNUSE, SAME, CNT + 3,ZB+4,ZB+1,ZB+7,ZB+2,ZB+15,ZB+2,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM10 <={ZB+10,UNUSE, SAME, CNT + 3,ZB+8,ZB+1,ZB+13,ZB+4,ZB+14,ZB+2,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM11 <={ZB+11,UNUSE, SAME, CNT + 2,ZB+6,ZB+7,ZB+13,ZB+5,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM12 <={ZB+12,UNUSE, SAME, CNT + 2,ZB+2,ZB+3,ZB+15,ZB+6,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM13 <={ZB+13,UNUSE, SAME, CNT + 3,ZB+11,ZB+5,ZB+10,ZB+4,ZB+14,ZB+3,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM14 <={ZB+14,UNUSE, SAME, CNT + 2,ZB+13,ZB+3,ZB+8,ZB+3,ZB+10,ZB+2,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM15 <={ZB+15,UNUSE, SAME, CNT + 2,ZB+12,ZB+6,ZB+9,ZB+2,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,
+			ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB,ZB};
+DRAM16 <=0;
+DRAM17 <=0;
+DRAM18 <=0;
+DRAM19 <=0;
+DRAM20 <=0;
+DRAM21 <=0;
+DRAM22 <=0;
+DRAM23 <=0;
+DRAM24 <=0;
+DRAM25 <=0;
+DRAM26 <=0;
+DRAM27 <=0;
+DRAM28 <=0;
+DRAM29 <=0;
+DRAM30 <= {INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF};
+DRAM31 <= {INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF};
+DRAM32 <= {INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF};
+DRAM33 <= {INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF};
+DRAM34 <= {INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF};
+DRAM35 <= {INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF};
+DRAM36 <= {INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF};
+DRAM37 <= {INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF};
+DRAM38 <= {INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF};
+DRAM39 <= {INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF,INF};
+
+DRAM400 <= {ZB,ZB+1,ZB+2,ZB+3,ZB+4,ZB+5,ZB+6,ZB+7,ZB+8,ZB+9,ZB+10,ZB+11,ZB+12,ZB+13,ZB+14,ZB+15,ZB+16,
+      ZB+17,ZB+18,ZB+19,ZB+20,ZB+21,ZB+22,ZB+23,ZB+24,ZB+25,ZB+26,ZB+27,ZB+28,ZB+29,ZB+30,ZB+31};
+DRAM401 <= {ZB_32,ZB_32+1,ZB_32+2,ZB_32+3,ZB_32+4,ZB_32+5,ZB_32+6,ZB_32+7,ZB_32+8,ZB_32+9,ZB_32+10,ZB_32+11,ZB_32+12,ZB_32+13,ZB_32+14,ZB_32+15,ZB_32+16,
+      ZB_32+17,ZB_32+18,ZB_32+19,ZB_32+20,ZB_32+21,ZB_32+22,ZB_32+23,ZB_32+24,ZB_32+25,ZB_32+26,ZB_32+27,ZB_32+28,ZB_32+29,ZB_32+30,ZB_32+31};
+
+end
+
+always @(posedge ACLK)
+begin
+  axi_wvalid_l <= APB_WENABLE;
+  axi_rvalid_l <= APB_RENABLE;
+end
+
+reg [3:0] axiw_cnt;
+always @(negedge ARESETN or posedge ACLK)
+begin
+  if(~ARESETN)
+  begin
+    APB_WREADY <= 1;
+    axiw_cnt <= 0;
+  end
+  else if(APB_WENABLE > axi_wvalid_l)
+  begin
+    APB_WREADY <= 0;
+    axiw_cnt <= axiw_cnt + 1'b1;
+  end
+  else if(axiw_cnt == 3)
+  begin
+	APB_WREADY <= 1;
+	axiw_cnt <= 0;
+	case(APB_WADDR)
+	   40'd0:  DRAM0 <= APB_WDATA;
+	   40'd1:  DRAM1 <= APB_WDATA;
+	   40'd2:  DRAM2 <= APB_WDATA;
+       40'd3:  DRAM3 <= APB_WDATA;
+	   40'd4:  DRAM4 <= APB_WDATA;
+       40'd5:  DRAM5 <= APB_WDATA;
+       40'd6:  DRAM6 <= APB_WDATA;
+       40'd7:  DRAM7 <= APB_WDATA;
+       40'd8:  DRAM8 <= APB_WDATA;
+       40'd9:  DRAM9 <= APB_WDATA;
+	   40'd10:  DRAM10 <= APB_WDATA;
+       40'd11:  DRAM11 <= APB_WDATA;
+       40'd12:  DRAM12 <= APB_WDATA;
+       40'd13:  DRAM13 <= APB_WDATA;
+       40'd14:  DRAM14 <= APB_WDATA;
+       40'd15:  DRAM15 <= APB_WDATA;
+       40'd16:  DRAM16 <= APB_WDATA;
+       40'd17:  DRAM17 <= APB_WDATA;
+       40'd18:  DRAM18 <= APB_WDATA;
+       40'd19:  DRAM19 <= APB_WDATA;
+	   40'd20:  DRAM20 <= APB_WDATA;
+       40'd21:  DRAM21 <= APB_WDATA;
+       40'd22:  DRAM22 <= APB_WDATA;
+       40'd23:  DRAM23 <= APB_WDATA;
+       40'd24:  DRAM24 <= APB_WDATA;
+       40'd25:  DRAM25 <= APB_WDATA;
+       40'd26:  DRAM26 <= APB_WDATA;
+       40'd27:  DRAM27 <= APB_WDATA;
+       40'd28:  DRAM28 <= APB_WDATA;
+       40'd29:  DRAM29 <= APB_WDATA;
+	   40'd30:  DRAM30 <= APB_WDATA;
+       40'd31:  DRAM31 <= APB_WDATA;
+       40'd32:  DRAM32 <= APB_WDATA;
+       40'd33:  DRAM33 <= APB_WDATA;
+       40'd34:  DRAM34 <= APB_WDATA;
+       40'd35:  DRAM35 <= APB_WDATA;
+       40'd36:  DRAM36 <= APB_WDATA;
+       40'd37:  DRAM37 <= APB_WDATA;
+       40'd38:  DRAM38 <= APB_WDATA;
+       40'd39:  DRAM39 <= APB_WDATA;
+       1000 : DRAM1000 <= APB_WDATA;
+       400 : DRAM400 <= APB_WDATA;
+       401 : DRAM401 <= APB_WDATA;
+      
+	endcase
+  end
+  else if(axiw_cnt > 0)
+  begin
+    APB_WREADY <= APB_WREADY;
+    axiw_cnt <= axiw_cnt + 1'b1;      
+  end
+  else begin
+    APB_WREADY <= APB_WREADY;
+    axiw_cnt <= axiw_cnt;
+  end
+end
+reg[31:0] acnt,ncnt;
+reg[4:0] axir_cnt;
+
+
+always @(negedge ARESETN or posedge ACLK)
+begin
+  if(~ARESETN)
+  begin
+    APB_RREADY <= 1;
+    axir_cnt <= 0;
+	acnt <= 32'h8000_0000;
+	ncnt <= 0;
+  end
+  else if(APB_RENABLE > axi_rvalid_l)
+  begin
+    APB_RREADY <= 0;
+    axir_cnt <= axir_cnt + 1'b1;
+  end
+  else if(axir_cnt == 3)
+  begin
+	APB_RREADY <= 1;
+	axir_cnt <= 0;
+	case(APB_RADDR)
+		40'd0: APB_RDATA <= DRAM0;
+		40'd1: APB_RDATA <= DRAM1;
+		40'd2: APB_RDATA <= DRAM2;
+		40'd3: APB_RDATA <= DRAM3;
+		40'd4: APB_RDATA <= DRAM4;
+		40'd5: APB_RDATA <= DRAM5;
+		40'd6: APB_RDATA <= DRAM6;
+		40'd7: APB_RDATA <= DRAM7;
+		40'd8: APB_RDATA <= DRAM8;
+		40'd9: APB_RDATA <= DRAM9;
+		40'd10: APB_RDATA <= DRAM10;
+        40'd11: APB_RDATA <= DRAM11;
+        40'd12: APB_RDATA <= DRAM12;
+        40'd13: APB_RDATA <= DRAM13;
+        40'd14: APB_RDATA <= DRAM14;
+        40'd15: APB_RDATA <= DRAM15;
+        40'd16: APB_RDATA <= DRAM16;
+        40'd17: APB_RDATA <= DRAM17;
+        40'd18: APB_RDATA <= DRAM18;
+        40'd19: APB_RDATA <= DRAM19;
+        40'd20: APB_RDATA <= DRAM20;
+        40'd21: APB_RDATA <= DRAM21;
+        40'd22: APB_RDATA <= DRAM22;
+        40'd23: APB_RDATA <= DRAM23;
+        40'd24: APB_RDATA <= DRAM24;
+        40'd25: APB_RDATA <= DRAM25;
+        40'd26: APB_RDATA <= DRAM26;
+        40'd27: APB_RDATA <= DRAM27;
+        40'd28: APB_RDATA <= DRAM28;
+        40'd29: APB_RDATA <= DRAM29;
+        40'd30: APB_RDATA <= DRAM30;
+        40'd31: APB_RDATA <= DRAM31;
+        40'd32: APB_RDATA <= DRAM32;
+        40'd33: APB_RDATA <= DRAM33;
+        40'd34: APB_RDATA <= DRAM34;
+        40'd35: APB_RDATA <= DRAM35;
+        40'd36: APB_RDATA <= DRAM36;
+        40'd37: APB_RDATA <= DRAM37;
+        40'd38: APB_RDATA <= DRAM38;
+        40'd39: APB_RDATA <= DRAM39;
+        40'd400: APB_RDATA <= DRAM400;
+        40'd401: APB_RDATA <= DRAM401;
+        32'h3e8 : APB_RDATA <= DRAM1000;
+	    //40'd40: APB_RDATA <= {acnt+31,acnt+32,ncnt+1,ncnt+2,acnt+10,acnt+4,acnt+5,acnt+6,acnt+7,acnt+8,acnt+9,acnt+10,acnt+11,acnt+12,acnt+13,acnt+14, acnt+15,acnt+16,acnt+17,acnt+18,acnt+19,acnt+20,acnt+21,acnt+22,acnt+23,acnt+24,acnt+25,acnt+26,acnt+27,acnt+28,acnt+29,acnt+30};
+      //  40'd41: APB_RDATA <= {acnt+31,acnt+32,ncnt+1,acnt+2,ncnt+1,acnt+4,acnt+5,acnt+6,acnt+7,acnt+8,acnt+9,acnt+10,acnt+11,acnt+12,acnt+13,acnt+14, acnt+15,acnt+16,acnt+17,acnt+18,acnt+19,acnt+20,acnt+21,acnt+22,acnt+23,acnt+24,acnt+25,acnt+26,acnt+27,acnt+28,acnt+29,acnt+30};
+		//default : APB_RDATA <= 1024'd1;
+	endcase
+  end
+  else if(axir_cnt > 0)
+  begin
+    APB_RREADY <= APB_RREADY;
+    axir_cnt <= axir_cnt + 1'b1;      
+  end
+  else begin
+    APB_RREADY <= APB_RREADY;
+    axir_cnt <= axir_cnt;
+  end
+  
+end
+
+endmodule

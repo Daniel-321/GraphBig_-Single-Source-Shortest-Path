@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file E:\JRSS_FPGA\PCIe_setup_DRAM\project_1.runs\design_1_xdma_0_0_synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: 사용 권한이 없습니다.

@@ -1,0 +1,521 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Nov  1 12:48:47 2019
+# Process ID: 5000
+# Current directory: F:/JUYG/PCIe_setup_DRAM_rev1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3484 F:\JUYG\PCIe_setup_DRAM_rev1\project_1.xpr
+# Log file: F:/JUYG/PCIe_setup_DRAM_rev1/vivado.log
+# Journal file: F:/JUYG/PCIe_setup_DRAM_rev1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/JUYG/PCIe_setup_DRAM_rev1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'E:/JRSS_FPGA/PCIe_setup_DRAM' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 976.508 ; gain = 256.590
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/new/axi_master.v F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/new/graph_acc.v F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/new/SFR_Interface.v F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/sim/graph_acc_sim.v F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/sim/AXI_model.v F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/sim/AXI_model_d.v F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/sim/graph_acc_sim_tb.v}
+update_compile_order -fileset sim_1
+add_files -norecurse {F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/new/axi_master.v F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/new/graph_acc.v F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/new/SFR_Interface.v}
+update_compile_order -fileset sources_1
+open_bd_design {F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:ddr4:2.2 - ddr4_0
+Adding cell -- xilinx.com:ip:xdma:4.0 - xdma_0
+Adding cell -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ddr4_0_300M
+Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_0
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - axi_bram_ctrl_0_bram
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Successfully read diagram <design_1> from BD file <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1075.465 ; gain = 34.109
+create_bd_cell -type module -reference graph_acc graph_acc_0
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'DEBUGdata' has a dependency on the module local parameter or undefined parameter 'DEBUG_DATA_WIDTH'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M01_AXI_DRAM_0' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M02_AXI_SFR_0' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'M02_AXI_SFR_0_ARESETN' as interface 'M02_AXI_SFR_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'M01_AXI_DRAM_0_ARESETN' as interface 'M01_AXI_DRAM_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'user_rst_n' as interface 'user_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'M02_AXI_SFR_0_ACLK' as interface 'M02_AXI_SFR_0_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M02_AXI_SFR_0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'M01_AXI_DRAM_0_ACLK' as interface 'M01_AXI_DRAM_0_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M01_AXI_DRAM_0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'user_clk' as interface 'user_clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M02_AXI_SFR_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M01_AXI_DRAM_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'user_rst_n'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'user_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property location {4 1929 753} [get_bd_cells graph_acc_0]
+set_property location {4 1770 777} [get_bd_cells graph_acc_0]
+connect_bd_net [get_bd_pins graph_acc_0/user_clk] [get_bd_pins ddr4_0/c0_ddr4_ui_clk]
+set_property location {4 1831 700} [get_bd_cells graph_acc_0]
+connect_bd_net [get_bd_pins graph_acc_0/M02_AXI_SFR_0_ACLK] [get_bd_pins ddr4_0/c0_ddr4_ui_clk]
+connect_bd_net [get_bd_pins graph_acc_0/M01_AXI_DRAM_0_ACLK] [get_bd_pins ddr4_0/c0_ddr4_ui_clk]
+connect_bd_net [get_bd_pins graph_acc_0/M01_AXI_DRAM_0_ARESETN] [get_bd_pins rst_ddr4_0_300M/peripheral_aresetn]
+connect_bd_net [get_bd_pins graph_acc_0/M02_AXI_SFR_0_ARESETN] [get_bd_pins rst_ddr4_0_300M/peripheral_aresetn]
+connect_bd_net [get_bd_pins graph_acc_0/user_rst_n] [get_bd_pins rst_ddr4_0_300M/peripheral_aresetn]
+set_property location {4 1852 739} [get_bd_cells graph_acc_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0
+INFO: [Device 21-403] Loading part xcku115-flvb2104-2-e
+create_bd_cell: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1734.375 ; gain = 631.438
+endgroup
+set_property location {5.5 2179 733} [get_bd_cells blk_mem_gen_0]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Use_RSTB_Pin {true} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_bd_cells blk_mem_gen_0]
+set_property location {5.5 2468 752} [get_bd_cells blk_mem_gen_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.0 axi_bram_ctrl_1
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+endgroup
+set_property location {5 2167 776} [get_bd_cells axi_bram_ctrl_1]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+set_property -dict [list CONFIG.DATA_WIDTH {512} CONFIG.SINGLE_PORT_BRAM {1} CONFIG.ECC_TYPE {0}] [get_bd_cells axi_bram_ctrl_1]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+set_property location {5 2201 637} [get_bd_cells axi_bram_ctrl_1]
+startgroup
+copy_bd_objs /  [get_bd_cells {axi_bram_ctrl_1}]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_1: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_1: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_1: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_1: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+set_property location {5 2199 811} [get_bd_cells axi_bram_ctrl_2]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_1/BRAM_PORTA] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA]
+connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_2/BRAM_PORTA] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTB]
+startgroup
+set_property -dict [list CONFIG.NUM_SI {2} CONFIG.NUM_MI {2}] [get_bd_cells axi_interconnect_0]
+endgroup
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_0/M01_AXI] [get_bd_intf_pins axi_bram_ctrl_1/S_AXI]
+connect_bd_intf_net [get_bd_intf_pins graph_acc_0/M01_AXI_DRAM_0] -boundary_type upper [get_bd_intf_pins axi_interconnect_0/S01_AXI]
+connect_bd_intf_net [get_bd_intf_pins graph_acc_0/M02_AXI_SFR_0] [get_bd_intf_pins axi_bram_ctrl_2/S_AXI]
+connect_bd_net [get_bd_pins axi_bram_ctrl_1/s_axi_aclk] [get_bd_pins ddr4_0/c0_ddr4_ui_clk]
+connect_bd_net [get_bd_pins axi_bram_ctrl_2/s_axi_aclk] [get_bd_pins ddr4_0/c0_ddr4_ui_clk]
+connect_bd_net [get_bd_pins axi_bram_ctrl_2/s_axi_aresetn] [get_bd_pins rst_ddr4_0_300M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_bram_ctrl_1/s_axi_aresetn] [get_bd_pins rst_ddr4_0_300M/peripheral_aresetn]
+group_bd_cells graph_acc_sub [get_bd_cells axi_bram_ctrl_2] [get_bd_cells graph_acc_0] [get_bd_cells blk_mem_gen_0] [get_bd_cells axi_bram_ctrl_1]
+set_property location {4 1817 750} [get_bd_cells graph_acc_sub]
+set_property range 256G [get_bd_addr_segs {xdma_0/M_AXI_BYPASS/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK}]
+assign_bd_address [get_bd_addr_segs {graph_acc_sub/axi_bram_ctrl_1/S_AXI/Mem0 }]
+CRITICAL WARNING: [BD 41-1376] Forcibly mapping </graph_acc_sub/axi_bram_ctrl_1/S_AXI/Mem0> into conflicting address 0x188000000 [ 64K ] in address space </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0>. This must be resolved before passing validation
+CRITICAL WARNING: [BD 41-1376] Forcibly mapping </graph_acc_sub/axi_bram_ctrl_1/S_AXI/Mem0> into conflicting address 0x0000000188000000 [ 64K ] in address space </xdma_0/M_AXI_BYPASS>. This must be resolved before passing validation
+</graph_acc_sub/axi_bram_ctrl_1/S_AXI/Mem0> is being mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0> at <0x188000000 [ 64K ]>
+</graph_acc_sub/axi_bram_ctrl_1/S_AXI/Mem0> is being mapped into </xdma_0/M_AXI_BYPASS> at <0x188000000 [ 64K ]>
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+validate_bd_design
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/axi_interconnect_0/S01_ACLK
+/axi_interconnect_0/M01_ACLK
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+connect_bd_net [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins rst_ddr4_0_300M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_interconnect_0/S01_ARESETN] [get_bd_pins rst_ddr4_0_300M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] -boundary_type upper
+connect_bd_net [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins ddr4_0/c0_ddr4_ui_clk]
+validate_bd_design
+CRITICAL WARNING: [BD 41-1356] Address block </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> is not mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0>. Please use Address Editor to either map or exclude it.
+CRITICAL WARNING: [BD 41-1356] Address block </graph_acc_sub/axi_bram_ctrl_2/S_AXI/Mem0> is not mapped into </graph_acc_sub/graph_acc_0/M02_AXI_SFR_0>. Please use Address Editor to either map or exclude it.
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'My M00_A00_ADDR_WIDTH(M00_A00_ADDR_WIDTH)' with value '38' for BD Cell 'axi_interconnect_0/xbar'. PARAM_VALUE.M01_A00_BASE_ADDR overlaps with address segment PARAM_VALUE.M00_A00_BASE_ADDR
+INFO: [IP_Flow 19-3438] Customization errors found on 'axi_interconnect_0/xbar'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_axi_crossbar_2.1::post_propagate Line 54
+ERROR: [IP_Flow 19-3461] Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'graph_acc_sub/blk_mem_gen_0' . Valid values are - 128, 256, 512, 1024
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Read Width B(Read_Width_B)' with value '512' for BD Cell 'graph_acc_sub/blk_mem_gen_0'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Disable Collision Warnings(Disable_Collision_Warnings)' with value 'false' for BD Cell 'graph_acc_sub/blk_mem_gen_0'. User configuration exceeds BRAM count in the selected device
+INFO: [IP_Flow 19-3438] Customization errors found on 'graph_acc_sub/blk_mem_gen_0'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_blk_mem_gen_8.4::post_propagate Line 66
+CRITICAL WARNING: [BD 41-1354] Segment </xdma_0/M_AXI_BYPASS/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK> at 0x0000000000 [ 256G ] overlaps with </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0/SEG_axi_bram_ctrl_1_Mem0> at <0x188000000 [ 64K ]> in the same network
+ERROR: [BD 41-971] Segment </graph_acc_sub/axi_bram_ctrl_1/S_AXI/Mem0> mapped into </xdma_0/M_AXI_BYPASS> at 0x000188000000[ 64K ] overlaps with </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> mapped at 0x00000000[ 256G ]
+CRITICAL WARNING: [BD 41-1356] Address block </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> is not mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0>. Please use Address Editor to either map or exclude it.
+CRITICAL WARNING: [BD 41-1356] Address block </graph_acc_sub/axi_bram_ctrl_2/S_AXI/Mem0> is not mapped into </graph_acc_sub/graph_acc_0/M02_AXI_SFR_0>. Please use Address Editor to either map or exclude it.
+validate_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 2066.309 ; gain = 137.484
+INFO: [Common 17-681] Processing pending cancel.
+validate_bd_design
+CRITICAL WARNING: [BD 41-1356] Address block </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> is not mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0>. Please use Address Editor to either map or exclude it.
+CRITICAL WARNING: [BD 41-1356] Address block </graph_acc_sub/axi_bram_ctrl_2/S_AXI/Mem0> is not mapped into </graph_acc_sub/graph_acc_0/M02_AXI_SFR_0>. Please use Address Editor to either map or exclude it.
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'My M00_A00_ADDR_WIDTH(M00_A00_ADDR_WIDTH)' with value '38' for BD Cell 'axi_interconnect_0/xbar'. PARAM_VALUE.M01_A00_BASE_ADDR overlaps with address segment PARAM_VALUE.M00_A00_BASE_ADDR
+INFO: [IP_Flow 19-3438] Customization errors found on 'axi_interconnect_0/xbar'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_axi_crossbar_2.1::post_propagate Line 54
+ERROR: [IP_Flow 19-3461] Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'graph_acc_sub/blk_mem_gen_0' . Valid values are - 128, 256, 512, 1024
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Read Width B(Read_Width_B)' with value '512' for BD Cell 'graph_acc_sub/blk_mem_gen_0'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Disable Collision Warnings(Disable_Collision_Warnings)' with value 'false' for BD Cell 'graph_acc_sub/blk_mem_gen_0'. User configuration exceeds BRAM count in the selected device
+INFO: [IP_Flow 19-3438] Customization errors found on 'graph_acc_sub/blk_mem_gen_0'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_blk_mem_gen_8.4::post_propagate Line 66
+CRITICAL WARNING: [BD 41-1354] Segment </xdma_0/M_AXI_BYPASS/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK> at 0x0000000000 [ 256G ] overlaps with </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0/SEG_axi_bram_ctrl_1_Mem0> at <0x188000000 [ 64K ]> in the same network
+ERROR: [BD 41-971] Segment </graph_acc_sub/axi_bram_ctrl_1/S_AXI/Mem0> mapped into </xdma_0/M_AXI_BYPASS> at 0x000188000000[ 64K ] overlaps with </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> mapped at 0x00000000[ 256G ]
+CRITICAL WARNING: [BD 41-1356] Address block </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> is not mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0>. Please use Address Editor to either map or exclude it.
+CRITICAL WARNING: [BD 41-1356] Address block </graph_acc_sub/axi_bram_ctrl_2/S_AXI/Mem0> is not mapped into </graph_acc_sub/graph_acc_0/M02_AXI_SFR_0>. Please use Address Editor to either map or exclude it.
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+save_bd_design
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_6fc7bb01.ui> 
+update_compile_order -fileset sources_1
+validate_bd_design
+CRITICAL WARNING: [BD 41-1356] Address block </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> is not mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0>. Please use Address Editor to either map or exclude it.
+CRITICAL WARNING: [BD 41-1356] Address block </graph_acc_sub/axi_bram_ctrl_2/S_AXI/Mem0> is not mapped into </graph_acc_sub/graph_acc_0/M02_AXI_SFR_0>. Please use Address Editor to either map or exclude it.
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'My M00_A00_ADDR_WIDTH(M00_A00_ADDR_WIDTH)' with value '38' for BD Cell 'axi_interconnect_0/xbar'. PARAM_VALUE.M01_A00_BASE_ADDR overlaps with address segment PARAM_VALUE.M00_A00_BASE_ADDR
+INFO: [IP_Flow 19-3438] Customization errors found on 'axi_interconnect_0/xbar'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_axi_crossbar_2.1::post_propagate Line 54
+ERROR: [IP_Flow 19-3461] Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'graph_acc_sub/blk_mem_gen_0' . Valid values are - 128, 256, 512, 1024
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Read Width B(Read_Width_B)' with value '512' for BD Cell 'graph_acc_sub/blk_mem_gen_0'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Disable Collision Warnings(Disable_Collision_Warnings)' with value 'false' for BD Cell 'graph_acc_sub/blk_mem_gen_0'. User configuration exceeds BRAM count in the selected device
+INFO: [IP_Flow 19-3438] Customization errors found on 'graph_acc_sub/blk_mem_gen_0'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_blk_mem_gen_8.4::post_propagate Line 66
+CRITICAL WARNING: [BD 41-1354] Segment </xdma_0/M_AXI_BYPASS/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK> at 0x0000000000 [ 256G ] overlaps with </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0/SEG_axi_bram_ctrl_1_Mem0> at <0x188000000 [ 64K ]> in the same network
+ERROR: [BD 41-971] Segment </graph_acc_sub/axi_bram_ctrl_1/S_AXI/Mem0> mapped into </xdma_0/M_AXI_BYPASS> at 0x000188000000[ 64K ] overlaps with </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> mapped at 0x00000000[ 256G ]
+CRITICAL WARNING: [BD 41-1356] Address block </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> is not mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0>. Please use Address Editor to either map or exclude it.
+CRITICAL WARNING: [BD 41-1356] Address block </graph_acc_sub/axi_bram_ctrl_2/S_AXI/Mem0> is not mapped into </graph_acc_sub/graph_acc_0/M02_AXI_SFR_0>. Please use Address Editor to either map or exclude it.
+validate_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2072.063 ; gain = 0.000
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+set_property range 256M [get_bd_addr_segs {xdma_0/M_AXI_BYPASS/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK}]
+set_property offset 0x0000000010000000 [get_bd_addr_segs {xdma_0/M_AXI_BYPASS/SEG_axi_bram_ctrl_1_Mem0}]
+update_module_reference design_1_graph_acc_0_0
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'DEBUGdata' has a dependency on the module local parameter or undefined parameter 'DEBUG_DATA_WIDTH'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M01_AXI_DRAM_0' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M02_AXI_SFR_0' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'M02_AXI_SFR_0_ARESETN' as interface 'M02_AXI_SFR_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'M01_AXI_DRAM_0_ARESETN' as interface 'M01_AXI_DRAM_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'user_rst_n' as interface 'user_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'M02_AXI_SFR_0_ACLK' as interface 'M02_AXI_SFR_0_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M02_AXI_SFR_0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'M01_AXI_DRAM_0_ACLK' as interface 'M01_AXI_DRAM_0_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M01_AXI_DRAM_0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'user_clk' as interface 'user_clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M02_AXI_SFR_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M01_AXI_DRAM_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'user_rst_n'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_graph_acc_0_0 from graph_acc_v1_0 1.0 to graph_acc_v1_0 1.0
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_6fc7bb01.ui> 
+update_module_reference design_1_graph_acc_0_0
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'DEBUGdata' has a dependency on the module local parameter or undefined parameter 'DEBUG_DATA_WIDTH'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M01_AXI_DRAM_0' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M02_AXI_SFR_0' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'M02_AXI_SFR_0_ARESETN' as interface 'M02_AXI_SFR_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'M01_AXI_DRAM_0_ARESETN' as interface 'M01_AXI_DRAM_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'user_rst_n' as interface 'user_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'M02_AXI_SFR_0_ACLK' as interface 'M02_AXI_SFR_0_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M02_AXI_SFR_0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'M01_AXI_DRAM_0_ACLK' as interface 'M01_AXI_DRAM_0_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M01_AXI_DRAM_0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'user_clk' as interface 'user_clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M02_AXI_SFR_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M01_AXI_DRAM_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'user_rst_n'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_graph_acc_0_0 from graph_acc_v1_0 1.0 to graph_acc_v1_0 1.0
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_6fc7bb01.ui> 
+validate_bd_design
+CRITICAL WARNING: [BD 41-1356] Address block </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> is not mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0>. Please use Address Editor to either map or exclude it.
+CRITICAL WARNING: [BD 41-1356] Address block </graph_acc_sub/axi_bram_ctrl_2/S_AXI/Mem0> is not mapped into </graph_acc_sub/graph_acc_0/M02_AXI_SFR_0>. Please use Address Editor to either map or exclude it.
+ERROR: [IP_Flow 19-3461] Value '31458304' is out of the range for parameter 'Memory Depth(MEM_DEPTH)' for BD Cell 'graph_acc_sub/axi_bram_ctrl_1' . Valid values are - 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432, 67108864, 134217728, 268435456
+INFO: [IP_Flow 19-3438] Customization errors found on 'graph_acc_sub/axi_bram_ctrl_1'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running pre_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_axi_bram_ctrl_4.0::pre_propagate Line 64
+ERROR: [IP_Flow 19-3461] Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'graph_acc_sub/blk_mem_gen_0' . Valid values are - 128, 256, 512, 1024
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Read Width B(Read_Width_B)' with value '512' for BD Cell 'graph_acc_sub/blk_mem_gen_0'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+INFO: [IP_Flow 19-3438] Customization errors found on 'graph_acc_sub/blk_mem_gen_0'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_blk_mem_gen_8.4::post_propagate Line 66
+CRITICAL WARNING: [BD 41-1353] </graph_acc_sub/axi_bram_ctrl_1/S_AXI/Mem0> is mapped at disjoint segments in master </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0/SEG_axi_bram_ctrl_1_Mem0> at <0x188000000 [ 64K ]> and in master </xdma_0/M_AXI_BYPASS/SEG_axi_bram_ctrl_1_Mem0> at <0x10000000 [ 64K ]>. It is illegal to have the same peripheral mapped to different addresses within the same network. Peripherals must either be mapped to the same offset in all masters, or to addresses that are apertures of each other or to contiguous addresses that can be combined into a single aligned address with a range that is a power of 2
+CRITICAL WARNING: [BD 41-1356] Address block </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> is not mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0>. Please use Address Editor to either map or exclude it.
+CRITICAL WARNING: [BD 41-1356] Address block </graph_acc_sub/axi_bram_ctrl_2/S_AXI/Mem0> is not mapped into </graph_acc_sub/graph_acc_0/M02_AXI_SFR_0>. Please use Address Editor to either map or exclude it.
+ERROR: [BD 41-241] Message from IP propagation TCL of /graph_acc_sub/axi_bram_ctrl_1: set_property error: Value '31458304' is out of the range for parameter 'Memory Depth(MEM_DEPTH)' for BD Cell 'graph_acc_sub/axi_bram_ctrl_1' . Valid values are - 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432, 67108864, 134217728, 268435456
+Customization errors found on 'graph_acc_sub/axi_bram_ctrl_1'. Restoring to previous valid configuration.
+
+ERROR: [BD 41-241] Message from IP propagation TCL of /graph_acc_sub/blk_mem_gen_0: set_property error: Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'graph_acc_sub/blk_mem_gen_0' . Valid values are - 128, 256, 512, 1024
+Validation failed for parameter 'Read Width B(Read_Width_B)' with value '512' for BD Cell 'graph_acc_sub/blk_mem_gen_0'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+Customization errors found on 'graph_acc_sub/blk_mem_gen_0'. Restoring to previous valid configuration.
+
+validate_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2079.375 ; gain = 7.313
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+validate_bd_design
+CRITICAL WARNING: [BD 41-1356] Address block </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> is not mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0>. Please use Address Editor to either map or exclude it.
+CRITICAL WARNING: [BD 41-1356] Address block </graph_acc_sub/axi_bram_ctrl_2/S_AXI/Mem0> is not mapped into </graph_acc_sub/graph_acc_0/M02_AXI_SFR_0>. Please use Address Editor to either map or exclude it.
+ERROR: [IP_Flow 19-3461] Value '31458304' is out of the range for parameter 'Memory Depth(MEM_DEPTH)' for BD Cell 'graph_acc_sub/axi_bram_ctrl_1' . Valid values are - 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432, 67108864, 134217728, 268435456
+INFO: [IP_Flow 19-3438] Customization errors found on 'graph_acc_sub/axi_bram_ctrl_1'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running pre_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_axi_bram_ctrl_4.0::pre_propagate Line 64
+ERROR: [IP_Flow 19-3461] Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'graph_acc_sub/blk_mem_gen_0' . Valid values are - 128, 256, 512, 1024
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Read Width B(Read_Width_B)' with value '512' for BD Cell 'graph_acc_sub/blk_mem_gen_0'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+INFO: [IP_Flow 19-3438] Customization errors found on 'graph_acc_sub/blk_mem_gen_0'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_blk_mem_gen_8.4::post_propagate Line 66
+CRITICAL WARNING: [BD 41-1353] </graph_acc_sub/axi_bram_ctrl_1/S_AXI/Mem0> is mapped at disjoint segments in master </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0/SEG_axi_bram_ctrl_1_Mem0> at <0x188000000 [ 64K ]> and in master </xdma_0/M_AXI_BYPASS/SEG_axi_bram_ctrl_1_Mem0> at <0x10000000 [ 64K ]>. It is illegal to have the same peripheral mapped to different addresses within the same network. Peripherals must either be mapped to the same offset in all masters, or to addresses that are apertures of each other or to contiguous addresses that can be combined into a single aligned address with a range that is a power of 2
+CRITICAL WARNING: [BD 41-1356] Address block </ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> is not mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0>. Please use Address Editor to either map or exclude it.
+CRITICAL WARNING: [BD 41-1356] Address block </graph_acc_sub/axi_bram_ctrl_2/S_AXI/Mem0> is not mapped into </graph_acc_sub/graph_acc_0/M02_AXI_SFR_0>. Please use Address Editor to either map or exclude it.
+ERROR: [BD 41-241] Message from IP propagation TCL of /graph_acc_sub/axi_bram_ctrl_1: set_property error: Value '31458304' is out of the range for parameter 'Memory Depth(MEM_DEPTH)' for BD Cell 'graph_acc_sub/axi_bram_ctrl_1' . Valid values are - 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432, 67108864, 134217728, 268435456
+Customization errors found on 'graph_acc_sub/axi_bram_ctrl_1'. Restoring to previous valid configuration.
+
+ERROR: [BD 41-241] Message from IP propagation TCL of /graph_acc_sub/blk_mem_gen_0: set_property error: Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'graph_acc_sub/blk_mem_gen_0' . Valid values are - 128, 256, 512, 1024
+Validation failed for parameter 'Read Width B(Read_Width_B)' with value '512' for BD Cell 'graph_acc_sub/blk_mem_gen_0'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+Customization errors found on 'graph_acc_sub/blk_mem_gen_0'. Restoring to previous valid configuration.
+
+validate_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2088.090 ; gain = 1.508
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+assign_bd_address
+</graph_acc_sub/axi_bram_ctrl_2/S_AXI/Mem0> is being mapped into </graph_acc_sub/graph_acc_0/M02_AXI_SFR_0> at <0x000000000 [ 8G ]>
+</ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK> is being mapped into </graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0> at <0x00000000 [ 256M ]>
+set_property offset 0x010000000 [get_bd_addr_segs {graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0/SEG_axi_bram_ctrl_1_Mem0}]
+set_property range 64K [get_bd_addr_segs {graph_acc_sub/graph_acc_0/M02_AXI_SFR_0/SEG_axi_bram_ctrl_2_Mem0}]
+set_property offset 0x010000000 [get_bd_addr_segs {graph_acc_sub/graph_acc_0/M02_AXI_SFR_0/SEG_axi_bram_ctrl_2_Mem0}]
+validate_bd_design
+save_bd_design
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_6fc7bb01.ui> 
+reset_run synth_1
+reset_run design_1_ddr4_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_6fc7bb01.ui> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(18) to net 's01_couplers_to_xbar_AWID'(17) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(18) to net 's01_couplers_to_xbar_ARID'(17) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_2_BRAM_PORTA_ADDR'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0_rid'(17) to net 'graph_acc_0_M01_AXI_DRAM_0_RID'(18) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0_bid'(17) to net 'graph_acc_0_M01_AXI_DRAM_0_BID'(18) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTB_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(18) to net 's01_couplers_to_xbar_AWID'(17) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(18) to net 's01_couplers_to_xbar_ARID'(17) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_2_BRAM_PORTA_ADDR'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0_rid'(17) to net 'graph_acc_0_M01_AXI_DRAM_0_RID'(18) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0_bid'(17) to net 'graph_acc_0_M01_AXI_DRAM_0_BID'(18) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTB_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_6fc7bb01.ui> 
+Exporting to file f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_ddr4_0_0/bd_0/hw_handoff/design_1_ddr4_0_0_microblaze_mcs.hwh
+Generated Block Design Tcl file f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_ddr4_0_0/bd_0/hw_handoff/design_1_ddr4_0_0_microblaze_mcs_bd.tcl
+Generated Hardware Definition File f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_ddr4_0_0/bd_0/synth/design_1_ddr4_0_0_microblaze_mcs.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ddr4_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ddr4_0_300M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block graph_acc_sub/axi_bram_ctrl_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block graph_acc_sub/graph_acc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block graph_acc_sub/blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block graph_acc_sub/axi_bram_ctrl_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_cc .
+Exporting to file F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 07f82fd95b55c36d; cache size = 377.407 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 6c7b87a52fc2d1a4; cache size = 377.407 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_cc_0, cache-ID = 316d64a4008edcb2; cache size = 377.407 MB.
+[Fri Nov  1 13:10:15 2019] Launched design_1_ddr4_0_0_synth_1, design_1_graph_acc_0_0_synth_1, design_1_xbar_0_synth_1, design_1_axi_bram_ctrl_1_1_synth_1, design_1_axi_bram_ctrl_1_0_synth_1, design_1_blk_mem_gen_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_ddr4_0_0_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_ddr4_0_0_synth_1/runme.log
+design_1_graph_acc_0_0_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_graph_acc_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_xbar_0_synth_1/runme.log
+design_1_axi_bram_ctrl_1_1_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_axi_bram_ctrl_1_1_synth_1/runme.log
+design_1_axi_bram_ctrl_1_0_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_axi_bram_ctrl_1_0_synth_1/runme.log
+design_1_blk_mem_gen_0_0_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_blk_mem_gen_0_0_synth_1/runme.log
+synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/synth_1/runme.log
+[Fri Nov  1 13:10:16 2019] Launched impl_1...
+Run output will be captured here: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 2171.375 ; gain = 83.285
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+startgroup
+set_property -dict [list CONFIG.DATA_WIDTH {1024}] [get_bd_cells graph_acc_sub/axi_bram_ctrl_1]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+endgroup
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_1: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_1: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+startgroup
+set_property -dict [list CONFIG.DATA_WIDTH {1024}] [get_bd_cells graph_acc_sub/axi_bram_ctrl_2]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_1: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_1: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+endgroup
+update_module_reference design_1_graph_acc_0_0
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'DEBUGdata' has a dependency on the module local parameter or undefined parameter 'DEBUG_DATA_WIDTH'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M01_AXI_DRAM_0' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M02_AXI_SFR_0' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'M02_AXI_SFR_0_ARESETN' as interface 'M02_AXI_SFR_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'M01_AXI_DRAM_0_ARESETN' as interface 'M01_AXI_DRAM_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'user_rst_n' as interface 'user_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'M02_AXI_SFR_0_ACLK' as interface 'M02_AXI_SFR_0_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M02_AXI_SFR_0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'M01_AXI_DRAM_0_ACLK' as interface 'M01_AXI_DRAM_0_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M01_AXI_DRAM_0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'user_clk' as interface 'user_clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M02_AXI_SFR_0_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M02_AXI_SFR_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M01_AXI_DRAM_0_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M01_AXI_DRAM_0_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'user_rst_n'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_graph_acc_0_0 from graph_acc_v1_0 1.0 to graph_acc_v1_0 1.0
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_6fc7bb01.ui> 
+reset_run synth_1
+reset_run design_1_axi_bram_ctrl_1_1_synth_1
+reset_run design_1_axi_bram_ctrl_1_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+ERROR: [BD 41-237] Bus Interface property DATA_WIDTH does not match between /graph_acc_sub/axi_bram_ctrl_2/S_AXI(1024) and /graph_acc_sub/graph_acc_0/M02_AXI_SFR_0(512)
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd 
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+validate_bd_design
+ERROR: [BD 41-237] Bus Interface property DATA_WIDTH does not match between /graph_acc_sub/axi_bram_ctrl_2/S_AXI(1024) and /graph_acc_sub/graph_acc_0/M02_AXI_SFR_0(512)
+validate_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2355.625 ; gain = 0.000
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+startgroup
+set_property -dict [list CONFIG.DATA_WIDTH {512}] [get_bd_cells graph_acc_sub/axi_bram_ctrl_1]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+endgroup
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_1: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_1: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+startgroup
+set_property -dict [list CONFIG.DATA_WIDTH {512}] [get_bd_cells graph_acc_sub/axi_bram_ctrl_2]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-2] design_1_axi_bram_ctrl_1_1: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.0-1] design_1_axi_bram_ctrl_1_1: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+endgroup
+startgroup
+endgroup
+validate_bd_design
+validate_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2356.344 ; gain = 0.719
+save_bd_design
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_6fc7bb01.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_6fc7bb01.ui> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(18) to net 's01_couplers_to_xbar_AWID'(17) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(18) to net 's01_couplers_to_xbar_ARID'(17) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_2_BRAM_PORTA_ADDR'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0_rid'(17) to net 'graph_acc_0_M01_AXI_DRAM_0_RID'(18) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0_bid'(17) to net 'graph_acc_0_M01_AXI_DRAM_0_BID'(18) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTB_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(18) to net 's01_couplers_to_xbar_AWID'(17) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(18) to net 's01_couplers_to_xbar_ARID'(17) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_2_BRAM_PORTA_ADDR'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0_rid'(17) to net 'graph_acc_0_M01_AXI_DRAM_0_RID'(18) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/graph_acc_sub/graph_acc_0/M01_AXI_DRAM_0_bid'(17) to net 'graph_acc_0_M01_AXI_DRAM_0_BID'(18) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTB_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : <F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ui/bd_6fc7bb01.ui> 
+Exporting to file f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_ddr4_0_0/bd_0/hw_handoff/design_1_ddr4_0_0_microblaze_mcs.hwh
+Generated Block Design Tcl file f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_ddr4_0_0/bd_0/hw_handoff/design_1_ddr4_0_0_microblaze_mcs_bd.tcl
+Generated Hardware Definition File f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_ddr4_0_0/bd_0/synth/design_1_ddr4_0_0_microblaze_mcs.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ddr4_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ddr4_0_300M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block graph_acc_sub/axi_bram_ctrl_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block graph_acc_sub/graph_acc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block graph_acc_sub/blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block graph_acc_sub/axi_bram_ctrl_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_cc .
+Exporting to file F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/JUYG/PCIe_setup_DRAM_rev1/project_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 07f82fd95b55c36d; cache size = 440.369 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 6c7b87a52fc2d1a4; cache size = 440.369 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_cc_0, cache-ID = 316d64a4008edcb2; cache size = 440.369 MB.
+[Fri Nov  1 13:45:19 2019] Launched design_1_ddr4_0_0_synth_1, design_1_xbar_0_synth_1, design_1_axi_bram_ctrl_1_1_synth_1, design_1_axi_bram_ctrl_1_0_synth_1, design_1_blk_mem_gen_0_0_synth_1, design_1_graph_acc_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_ddr4_0_0_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_ddr4_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_xbar_0_synth_1/runme.log
+design_1_axi_bram_ctrl_1_1_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_axi_bram_ctrl_1_1_synth_1/runme.log
+design_1_axi_bram_ctrl_1_0_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_axi_bram_ctrl_1_0_synth_1/runme.log
+design_1_blk_mem_gen_0_0_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_blk_mem_gen_0_0_synth_1/runme.log
+design_1_graph_acc_0_0_synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/design_1_graph_acc_0_0_synth_1/runme.log
+synth_1: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/synth_1/runme.log
+[Fri Nov  1 13:45:19 2019] Launched impl_1...
+Run output will be captured here: F:/JUYG/PCIe_setup_DRAM_rev1/project_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:14 ; elapsed = 00:00:30 . Memory (MB): peak = 2425.453 ; gain = 69.109

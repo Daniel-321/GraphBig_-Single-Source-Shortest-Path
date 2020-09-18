@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Oct 10 14:00:59 2019
+# Process ID: 27368
+# Current directory: F:/JRSS_FPGA/PCIe_setup_DRAM
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24852 F:\JRSS_FPGA\PCIe_setup_DRAM\project_1.xpr
+# Log file: F:/JRSS_FPGA/PCIe_setup_DRAM/vivado.log
+# Journal file: F:/JRSS_FPGA/PCIe_setup_DRAM\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/JRSS_FPGA/PCIe_setup_DRAM/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'E:/JRSS_FPGA/PCIe_setup_DRAM' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 958.855 ; gain = 264.973
+update_compile_order -fileset sources_1

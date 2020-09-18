@@ -1,0 +1,385 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 35660
+License: Customer
+
+Current time: 	Wed Apr 10 17:35:45 KST 2019
+Time zone: 	Korea Standard Time (Asia/Seoul)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 123 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	G:/programs/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	G:/programs/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Bryan
+User home directory: C:/Users/Bryan
+User working directory: G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3
+User country: 	KR
+User language: 	ko
+User locale: 	ko_KR
+
+RDI_BASEROOT: G:/programs/Xilinx/Vivado
+HDI_APPROOT: G:/programs/Xilinx/Vivado/2017.4
+RDI_DATADIR: G:/programs/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: G:/programs/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Bryan/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Bryan/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Bryan/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	G:/programs/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/vivado.log
+Vivado journal file location: 	G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/vivado.jou
+Engine tmp dir: 	G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/.Xil/Vivado-35660-BRYAN_LAB_PC
+
+GUI allocated memory:	133 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 587 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 54 MB (+54218kb) [00:00:10]
+// [Engine Memory]: 483 MB (+354789kb) [00:00:10]
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: G:\DTL\Samsung_MP\FPGA\Projects\PCIe_example\AR65544\project_3\project_1.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// [GUI Memory]: 58 MB (+1669kb) [00:00:12]
+// [Engine Memory]: 572 MB (+68192kb) [00:00:12]
+// HMemoryUtils.trashcanNow. Engine heap size: 630 MB. GUI used memory: 38 MB. Current time: 4/10/19 5:35:47 PM KST
+// [Engine Memory]: 630 MB (+31100kb) [00:00:17]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 680 MB (+18812kb) [00:00:27]
+// [GUI Memory]: 71 MB (+9617kb) [00:00:29]
+// [Engine Memory]: 740 MB (+26994kb) [00:00:29]
+// [Engine Memory]: 777 MB (+899kb) [00:00:29]
+// [GUI Memory]: 78 MB (+4078kb) [00:00:30]
+// [GUI Memory]: 89 MB (+7139kb) [00:00:31]
+// Tcl Message: open_project G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/programs/Xilinx/Vivado/2017.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 814 MB. GUI used memory: 66 MB. Current time: 4/10/19 5:36:06 PM KST
+// [Engine Memory]: 824 MB (+7839kb) [00:00:33]
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 927.801 ; gain = 284.504 
+// Project name: project_1; location: G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3; part: xcku115-flvb2104-2-e
+dismissDialog("Open Project"); // bs (cj)
+// [GUI Memory]: 95 MB (+1800kb) [00:00:35]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (design_1_wrapper.v) elapsed time: 0.2s
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 2, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 2, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// bs (cj):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.srcs/sources_1/bd/design_1/design_1.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- xilinx.com:ip:ddr4:2.2 - ddr4_0 Adding cell -- xilinx.com:ip:xdma:4.0 - xdma_0 Adding cell -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ddr4_0_300M Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0 Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0 Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_0 
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - axi_bram_ctrl_0_bram Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc Successfully read diagram <design_1> from BD file <G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// [Engine Memory]: 865 MB (+30kb) [00:01:08]
+// [GUI Memory]: 107 MB (+7881kb) [00:01:08]
+// TclEventType: RSB_CONNECTION_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 903 MB. GUI used memory: 72 MB. Current time: 4/10/19 5:36:44 PM KST
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 994.859 ; gain = 59.211 
+// Elapsed time: 10 seconds
+dismissDialog("Open Block Design"); // bs (cj)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /ddr4_0_c0_ddr4_ui_clk_sync_rst 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /ddr4_0_c0_ddr4_ui_clk_sync_rst 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /ddr4_0_c0_ddr4_ui_clk_sync_rst 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /ddr4_0_c0_ddr4_ui_clk_sync_rst 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aclk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aclk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /ddr4_0_c0_ddr4_ui_clk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /ddr4_0_c0_ddr4_ui_clk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /util_ds_buf_IBUF_OUT 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /util_ds_buf_IBUF_OUT 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /util_ds_buf_IBUF_DS_ODIV2 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /util_ds_buf_IBUF_DS_ODIV2 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /util_ds_buf_IBUF_OUT 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /util_ds_buf_IBUF_DS_ODIV2 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /util_ds_buf_IBUF_DS_ODIV2 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// N (cj):  Re-customize IP : addNotify
+// r (cj): Re-customize IP: addNotify
+// [Engine Memory]: 952 MB (+45963kb) [00:01:19]
+dismissDialog("Re-customize IP"); // N (cj)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "PCIe ID", 2); // bb (C, r)
+selectComboBox("Sub Class Interface Menu (pf0_sub_class_interface_menu)", "Other memory controller", 1); // y (C, r)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cj)
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (N, cj)
+// aN (cj): Cancel Implementation: addNotify
+selectButton(PAResourceQtoS.StateMonitor_RESET_RUN, "Reset Run"); // a (aN)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Cancel Implementation"); // aN (cj)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 116 MB (+3340kb) [00:01:35]
+dismissDialog("Resetting Runs"); // bs (cj)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cj): Re-customize IP: addNotify
+// [GUI Memory]: 131 MB (+10230kb) [00:01:39]
+// HMemoryUtils.trashcanNow. Engine heap size: 992 MB. GUI used memory: 114 MB. Current time: 4/10/19 5:37:13 PM KST
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "PCIe ID", 2); // bb (C, r)
+selectComboBox("Sub Class Interface Menu (pf0_sub_class_interface_menu)", "Other memory controller", 1); // y (C, r)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// [GUI Memory]: 139 MB (+1225kb) [00:01:44]
+dismissDialog("Re-customize IP"); // r (cj)
+// Tcl Command: 'set_property -dict [list CONFIG.pf0_sub_class_interface_menu {Other_memory_controller} CONFIG.pf0_class_code_sub {80} CONFIG.pf0_class_code {058000}] [get_bd_cells xdma_0]'
+// r (cj): Re-customize IP: addNotify
+// bs (r):  Customize IP : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.pf0_sub_class_interface_menu {Other_memory_controller} CONFIG.pf0_class_code_sub {80} CONFIG.pf0_class_code {058000}] [get_bd_cells xdma_0] 
+// TclEventType: REPORT_IP_STATUS_STALE
+// [Engine Memory]: 1,015 MB (+16254kb) [00:01:46]
+// Tcl Message: INFO: [Device 21-403] Loading part xcku115-flvb2104-2-e 
+// [Engine Memory]: 1,446 MB (+398046kb) [00:01:51]
+// [Engine Memory]: 1,528 MB (+10900kb) [00:01:52]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,617 MB. GUI used memory: 114 MB. Current time: 4/10/19 5:37:27 PM KST
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: xit::create_sub_core: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1759.297 ; gain = 627.168 
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// [Engine Memory]: 1,620 MB (+15600kb) [00:01:57]
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,635 MB. GUI used memory: 113 MB. Current time: 4/10/19 5:37:42 PM KST
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// [GUI Memory]: 146 MB (+165kb) [00:02:14]
+// Tcl Message: endgroup 
+// Elapsed time: 30 seconds
+dismissDialog("Customize IP"); // bs (r)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /resetn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /resetn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /pcie_perstn_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ddr4_0_300M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ddr4_0_300M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /util_ds_buf_IBUF_DS_ODIV2 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /util_ds_buf_IBUF_DS_ODIV2 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /util_ds_buf_IBUF_DS_ODIV2 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /util_ds_buf_IBUF_DS_ODIV2 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ddr4_0_300M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ddr4_0_300M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aclk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aclk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aclk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /xdma_0_axi_aclk 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// am (cj): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bs (cj):  Save Constraints : addNotify
+// TclEventType: RSB_SAVE_DIAGRAM
+dismissDialog("Save Project"); // am (cj)
+// CommandFailedException: ERROR: [BD 41-45] Cell path not found: /design_1 
+// Tcl Message: save_bd_design 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : <G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.srcs/sources_1/bd/design_1/design_1.bd>  Wrote  : <G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// x (cj): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Constraints"); // bs (cj)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run design_1_xdma_0_0_synth_1 
+// f (cj): Launch Runs: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: DG_GRAPH_GENERATED
+// 'cv' command handler elapsed time: 7 seconds
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// bs (cj):  Generate Bitstream : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// CommandFailedException: ERROR: [BD 41-45] Cell path not found: /design_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// [Engine Memory]: 1,704 MB (+3251kb) [00:02:35]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// CommandFailedException: ERROR: [BD 41-45] Cell path not found: /design_1 
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Wrote  : <G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.srcs/sources_1/bd/design_1/design_1.bd>  
+// Tcl Message: VHDL Output written to : G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.srcs/sources_1/bd/design_1/synth/design_1.v 
+// Tcl Message: VHDL Output written to : G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.srcs/sources_1/bd/design_1/sim/design_1.v VHDL Output written to : G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v 
+// Tcl Message: INFO: [BD 41-1637] Generated targets are already up-to-date for bd-design 'bd_45eb' - hence not re-generating. INFO: [BD 41-1029] Generation completed for the IP Integrator block ddr4_0 . 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,728 MB. GUI used memory: 108 MB. Current time: 4/10/19 5:38:12 PM KST
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block xdma_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ddr4_0_300M . INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0_bram . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/s00_couplers/auto_ds . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_cc . 
+// Tcl Message: Exporting to file G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh Generated Block Design Tcl file G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl Generated Hardware Definition File G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 07f82fd95b55c36d; cache size = 212.116 MB. 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 6c7b87a52fc2d1a4; cache size = 212.116 MB. 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_cc_0, cache-ID = 316d64a4008edcb2; cache size = 212.116 MB. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// [GUI Memory]: 161 MB (+7493kb) [00:02:57]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,749 MB. GUI used memory: 105 MB. Current time: 4/10/19 5:38:32 PM KST
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Apr 10 17:38:34 2019] Launched design_1_xdma_0_0_synth_1, synth_1... Run output will be captured here: design_1_xdma_0_0_synth_1: G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.runs/design_1_xdma_0_0_synth_1/runme.log synth_1: G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.runs/synth_1/runme.log [Wed Apr 10 17:38:34 2019] Launched impl_1... Run output will be captured here: G:/DTL/Samsung_MP/FPGA/Projects/PCIe_example/AR65544/project_3/project_1.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1886.473 ; gain = 71.398 
+// Elapsed time: 30 seconds
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 169 MB (+98kb) [00:26:04]
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.

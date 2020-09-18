@@ -1,0 +1,98 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 27368
+License: Customer
+
+Current time: 	Thu Oct 10 14:01:19 KST 2019
+Time zone: 	Korea Standard Time (Asia/Seoul)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 2048x1152
+Screen resolution (DPI): 96
+Available screens: 3
+Available disk space: 120 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	HEON
+User home directory: C:/Users/HEON
+User working directory: F:/JRSS_FPGA/PCIe_setup_DRAM
+User country: 	KR
+User language: 	ko
+User locale: 	ko_KR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/HEON/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/HEON/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/HEON/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	F:/JRSS_FPGA/PCIe_setup_DRAM/vivado.log
+Vivado journal file location: 	F:/JRSS_FPGA/PCIe_setup_DRAM/vivado.jou
+Engine tmp dir: 	F:/JRSS_FPGA/PCIe_setup_DRAM/.Xil/Vivado-27368-DUHEON-DTL-190909
+
+GUI allocated memory:	179 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 504 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 47 MB (+47106kb) [00:00:07]
+// [Engine Memory]: 478 MB (+349800kb) [00:00:07]
+// Opening Vivado Project: F:\JRSS_FPGA\PCIe_setup_DRAM\project_1.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project F:/JRSS_FPGA/PCIe_setup_DRAM/project_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// HMemoryUtils.trashcanNow. Engine heap size: 580 MB. GUI used memory: 38 MB. Current time: 10/10/19 2:01:22 PM KST
+// [Engine Memory]: 580 MB (+82319kb) [00:00:12]
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 611 MB (+1746kb) [00:00:27]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 661 MB (+20226kb) [00:00:37]
+// [GUI Memory]: 79 MB (+30930kb) [00:00:38]
+// [Engine Memory]: 696 MB (+1477kb) [00:00:38]
+// [GUI Memory]: 93 MB (+10398kb) [00:00:39]
+// [GUI Memory]: 98 MB (+674kb) [00:00:39]
+// [Engine Memory]: 732 MB (+1729kb) [00:00:39]
+// [Engine Memory]: 770 MB (+1555kb) [00:00:40]
+// [Engine Memory]: 812 MB (+3313kb) [00:00:41]
+// [GUI Memory]: 104 MB (+1086kb) [00:00:41]
+// Tcl Message: open_project F:/JRSS_FPGA/PCIe_setup_DRAM/project_1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'E:/JRSS_FPGA/PCIe_setup_DRAM' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 819 MB. GUI used memory: 70 MB. Current time: 10/10/19 2:01:53 PM KST
+// Tcl Message: open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 958.855 ; gain = 264.973 
+// Project name: project_1; location: F:/JRSS_FPGA/PCIe_setup_DRAM; part: xcku115-flvb2104-2-e
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 348 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v)]", 3); // B (D, cj)
